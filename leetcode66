@@ -1,0 +1,32 @@
+Plus One
+algorithm
+
+
+
+class Solution {
+    public int[] plusOne(int[] digits) {
+        int crry=1;
+        for(i=0;i<=digits.length-1;i++){
+            
+            int tmp = digits[i]+crry;
+         if(tmp >= 10){
+            crry=1;
+            digits[i]=tmp%10;
+        }
+        else{
+            crry=0;
+            digits[i]=tmp;
+        }
+       }
+        if(crry !=0){
+            newDigits=new int[len(digits)+1];
+            newDigits[0]=1;
+            for(j=1;j<=digits.length;j--){
+                newDigits[j]=digits[j-1];
+            }
+            return newDigits;
+             return digits;
+        }
+        
+    }
+}
